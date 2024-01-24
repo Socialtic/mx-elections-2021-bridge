@@ -18,7 +18,6 @@
     "PARTY_URL_RANGE": "URL_logo_partido_coal!I1:R62",
     "person_header": [
         "person_id",
-        "curp",
         "full_name",
         "first_name",
         "last_name",

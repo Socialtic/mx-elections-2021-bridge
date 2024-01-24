@@ -78,7 +78,7 @@ for party in party_data:
     if party["party_id"] == "":
         party["is_deleted"] = True
     del party["party_id"]
-parties = sheet_reader(SHEET_ID, f"Table party!B2:B{get_end_range(ST_RANGES['party'])}", as_list=True)
+parties = sheet_reader(SHEET_ID, f"Table party!C2:C{get_end_range(ST_RANGES['party'])}", as_list=True)
 
 # CONTEST
 contest_data = sheet_reader(SHEET_ID, f"Table contest!{ST_RANGES['contest']}")

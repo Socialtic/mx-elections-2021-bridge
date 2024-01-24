@@ -307,6 +307,11 @@ def make_person_struct(dataset, contest_chambers, header):
                     row[field] = data[field]
                 else:
                     row[field] = '0001-01-01'
+            elif field == "curp":
+                if data.get(field):
+                    row[field] = data[field]
+                else:
+                    row[field] = ''
             else:
                 row[field] = data[field]
         people.append(row)
