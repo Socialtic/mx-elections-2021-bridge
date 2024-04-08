@@ -80,8 +80,8 @@ def main():
     # Making a table for double check
     person_table = make_table(person_header, person_data)
     write_csv(person_table, f"{CSV_DB_PATH}/person")
-    for person in person_data:
-        del person["person_id"]
+    # for person in person_data:
+    #     del person["person_id"]
 
     # OTHER-NAME
     other_name_header = ["other_name_id", "other_name_type", "name",

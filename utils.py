@@ -18,7 +18,7 @@ class Catalogues:
     """**Common catalogues for table's construction**
     """
     DEGREES_OF_STUDIES = ['', 'ELEMENTARY', 'HIGH SCHOOL', 'ASSOCIATE DEGREE',
-                          'BACHELOR´S DEGREE',
+                          'BACHELOR’S DEGREE',
                           'UNIVERSITY 1ST PROFESSIONAL DEGREE',
                           'MASTER DEGREE', 'PHD DEGREE']
     #   PRESIDENTE NACIONAL, GOBERNADOR, DIPUTADO , PRESIDENTE MUNICIPAL, SENADOR NACIONAL, DIPUTACIONES LOCALES
@@ -249,10 +249,8 @@ def get_contest_id(data, contest_chambers):
         if location in contest_chamber:
             return i
 
-    print("person_id: " + str(data["person_id"]))
-    print("role_type: " + str(data["role_type"]))
+    print("get_contest_id: " + "person_id: " + str(data["person_id"]) + " role_type: " + str(data["role_type"]) + " location: " + str(location) + "\n")
     #print("role_type_es: " + str(Catalogues.SPANISH_ROLES[data["role_type"]]))
-    print("location: " + str(location) + "\n")
     #print("contest_chamber: " + str(contest_chambers))
     return -1
 
@@ -315,6 +313,7 @@ def make_person_struct(dataset, contest_chambers, header):
             else:
                 row[field] = data[field]
         people.append(row)
+        # print(row)
     return people
 
 
@@ -413,7 +412,7 @@ def make_membership(dataset, parties, coalitions, contest_chambers, header, role
             lines.append({
                 "is_deleted": data["is_deleted"],
                 "membership_id": i,
-                "person_id": i,
+                "person_id": data["person_id"],
                 # TODO: By now contest_id == role_id. Change soon
                 "role_id": role_id,
                 "party_id": parties.index(data["abbreviation"].lower()) + 1,
