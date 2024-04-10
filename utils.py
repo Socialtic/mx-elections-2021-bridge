@@ -338,7 +338,7 @@ def make_other_names_struct(dataset):
                 "is_deleted": data["is_deleted"],
                 "other_name_type": 2, # TODO
                 "name": data["nickname"],
-                "person_id": i
+                "person_id": data["person_id"]
             })
     return result
 
@@ -370,7 +370,7 @@ def make_person_profession(dataset, professions):
                         lines.append({
                             "person_profession_id": person_profession_id,
                             "is_deleted": data["is_deleted"],
-                            "person_id": i,
+                            "person_id": data["person_id"],
                             "profession_id": profession_id
                         })
                     except Exception:
@@ -477,7 +477,10 @@ def get_owner_id(dataset, field_data, search_field):
     """
     for i, data in enumerate(dataset, start=1):
         if data[search_field].lower() == field_data.lower():
-            return i
+            if (data["person_id"]):
+                return data["person_id"]
+            else:
+                return i
     return -1
 
 
@@ -542,7 +545,7 @@ def make_url_struct(dataset, url_types, url_id_counter, coalitions=[],
                                     "url_type": get_url_type_id(field, url_types),
                                     "description": '',  # TODO
                                     "owner_type": 4 if field == "source_of_truth" else 1,  # TODO: persona, partido, coalicion
-                                    "owner_id": i
+                                    "owner_id": data["person_id"]
                                 }
                             lines.append(row)
                 elif field == "URL_others":
@@ -557,7 +560,7 @@ def make_url_struct(dataset, url_types, url_id_counter, coalitions=[],
                                 "url_type": get_url_type_id(field, url_types, clean_url),
                                 "description": '',  # TODO
                                 "owner_type": 1,  # TODO: persona, partido, coalicion
-                                "owner_id": i
+                                "owner_id": data["person_id"]
                             }
                             lines.append(row)
     return lines, url_id
