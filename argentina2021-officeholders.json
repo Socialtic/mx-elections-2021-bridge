@@ -1,0 +1,31 @@
+{
+  "country:": "Argentina",
+  "SHEET_ID": "1lngH75GyTe5u61hQfqHqseWUjDq5jhuT2TP3hf1CDnU",
+  "ST_RANGES": {
+    "area": "A1:H84",
+    "chamber": "A1:C83",
+    "role": "A1:F83",
+    "coalition": "A1:D7",
+    "party": "A1:F119",
+    "profession": "A1:B88",
+    "contest": "A1:G33",
+    "url_types": "B2:B23"
+  },
+  "CAPTURE_SHEET_ID": "1xpUPmExf6f3v7a5ZhzO2rHtVwToItNXZUJ2ormbdFJ8",
+  "xREAD_RANGE": "Todos!A1:AL3",
+  "READ_RANGE": "Todos!A1:AL1635",
+  "COALITION_URL_RANGE":  "URL_logo_partido_coal!A1:H1",
+  "PARTY_URL_RANGE": "URL_logo_partido_coal!I1:R93",
+  "person_header": [
+    "person_id",
+    "dni",
+    "full_name",
+    "first_name",
+    "last_name",
+    "date_birth",
+    "gender",
+    "dead_or_alive",
+    "last_degree_of_studies",
+    "contest_id"
+  ]
+}
