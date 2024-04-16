@@ -268,9 +268,10 @@ def get_contest_id(data, contest_chambers,counter=0):
 
     for i, contest_chamber in enumerate(contest_chambers, start=1):
         # if location in contest_chamber and Catalogues.SPANISH_ROLES[data["role_type"]] in contest_chamber:
-        if location in contest_chamber:
+        if location == contest_chamber:
             return i
 
+    print("get_contest_id: " + "person_id: " + str(data["person_id"]) + " role_type: " + str(data["role_type"]) + " location: " + str(location))
 
     return -1
 
