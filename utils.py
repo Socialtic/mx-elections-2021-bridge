@@ -243,13 +243,17 @@ def get_contest_id(data, contest_chambers):
         location = f"distrito local {data['area']} {data['state'].lower()}"
         #print("diputacion local: " + Catalogues.SPANISH_ROLES[data["role_type"]])
 
+    elif data["role_type"] == "executiveCouncil":
+        location = f"presidencia del municipio de {data['area'].lower()}"
+        #print("diputacion local: " + Catalogues.SPANISH_ROLES[data["role_type"]])
+
     location = data['contest'].lower()
     for i, contest_chamber in enumerate(contest_chambers, start=1):
         #if location in contest_chamber and Catalogues.SPANISH_ROLES[data["role_type"]] in contest_chamber:
-        if location in contest_chamber:
+        if location == contest_chamber:
             return i
 
-    print("get_contest_id: " + "person_id: " + str(data["person_id"]) + " role_type: " + str(data["role_type"]) + " location: " + str(location) + "\n")
+    print("get_contest_id: " + "person_id: " + str(data["person_id"]) + " role_type: " + str(data["role_type"]) + " location: " + str(location))
     #print("role_type_es: " + str(Catalogues.SPANISH_ROLES[data["role_type"]]))
     #print("contest_chamber: " + str(contest_chambers))
     return -1
@@ -266,7 +270,7 @@ def get_role_id(roles, contest_id):
             #print("Role SI " + role["contest_id"] + " vs " + str(contest_id) + ": " + str(i))
             return i
 
-    print("Role NO " + role["contest_id"] + " vs " + str(contest_id))
+    print("get_role_id: Role not found. We reached role " + role["id"] + " searching for a role with contest_id " + str(contest_id))
     return -1
 
 def make_person_struct(dataset, contest_chambers, header):
