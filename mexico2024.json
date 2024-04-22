@@ -1,0 +1,32 @@
+{
+    "country:": "Mexico",
+    "SHEET_ID": "1ObRLk3oXG4Q47HiHwx0dGTMssRZ6wCO5ZABee5t60qs",
+    "x_SHEET_ID_2022": "1H9I_fhpQWMPn5wgRvdBrnmoZ9WpgTIwJnKfda6LEycY",
+    "ST_RANGES": {
+        "area": "A1:H1154", 
+        "chamber": "A1:C1154",
+        "role": "A1:F1155",
+        "contest": "A1:G1154",
+        "coalition": "A1:D95",
+        "party": "A1:F85",
+        "profession": "A1:B119",
+        "url_types": "B2:B23"
+    },
+    "CAPTURE_SHEET_ID": "162Mg4SbflawNKcu4df4Bik5FBksoyQh0MS73e13ka-k",
+    "x_CAPTURE_SHEET_ID_2022": "146HBFWr_6_jvmCtTPHoDcSI3dFZcqSUPdmoc69oayrU",
+    "x_CAPTURE_SHEET_ID_campaign": "1mk9LTI5RBYwrEPzILeDY925VJbLVmEoZyRzaa1gZ_hk",
+    "READ_RANGE": "Captura!A1:AI5000",
+    "COALITION_URL_RANGE": "URL_logo_partido_coal!A1:H37",
+    "PARTY_URL_RANGE": "URL_logo_partido_coal!I1:R62",
+    "person_header": [
+        "person_id",
+        "full_name",
+        "first_name",
+        "last_name",
+        "date_birth",
+        "gender",
+        "dead_or_alive",
+        "last_degree_of_studies",
+        "contest_id"
+    ]
+}
