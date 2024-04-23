@@ -1,14 +1,14 @@
 from sheets import sheet_reader
 from utils import colors_to_list, make_banner, make_table, write_csv
 
-SHEET_ID = "1lngH75GyTe5u61hQfqHqseWUjDq5jhuT2TP3hf1CDnU"
+SHEET_ID = "18E0FFGli2OuHaD-ulSsCvfE8k5lzUjIMPpARuF-bnog"
 CSV_DB_PATH = 'csv_db'
 
 # Struct read ranges
 ST_RANGES = {
     "area": "A1:H84", "chamber": "A1:C83", "role": "A1:F83",
     "coalition": "A1:D7", "party": "A1:F114",
-    "profession": "A1:B86", "contest": "A1:C33"
+    "profession": "A1:B86", "contest": "A1:G33"
     # "past-membership": "A1:G1",
     }
 

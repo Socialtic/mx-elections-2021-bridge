@@ -335,17 +335,17 @@ def make_person_profession(dataset, professions):
     person_profession_id = 0
     for i, data in enumerate(dataset, start=1):
         for field in data:
-            if re.search(pattern, field):
-                profession = data[field].lower()
-                if profession:
-                    profession_id = professions.index(profession) + 1
-                    person_profession_id += 1
-                    lines.append({
-                        "person_profession_id": person_profession_id,
-                        "is_deleted": data["is_deleted"],
-                        "person_id": i,
-                        "profession_id": profession_id
-                    })
+                if re.search(pattern, field):
+                    profession = data[field].lower()
+                    if profession:
+                        profession_id = professions.index(profession) + 1
+                        person_profession_id += 1
+                        lines.append({
+                            "person_profession_id": person_profession_id,
+                            "is_deleted": data["is_deleted"],
+                            "person_id": i,
+                            "profession_id": profession_id
+                        })
     return lines
 
 
@@ -369,6 +369,20 @@ def make_membership(dataset, parties, coalitions, contest_chambers, header):
     """
     lines = []
     for i, data in enumerate(dataset, start=1):
+        if data["partido"].lower() == "coalicion civica":
+                data["partido"] = "Coalición Cívica"
+
+        if data["partido"].lower() == "córdoba federal":
+                data["partido"] = "Coalición Cívica"
+
+        if data["partido"].lower() == "forja":
+                data["partido"] = "Coalición Cívica"
+
+        if data["partido"].lower() == "creo":
+                data["partido"] = "Coalición Cívica"
+
+        if data["partido"].lower() == "apb":
+                data["partido"] = "Coalición Cívica"
         # if data["coalition"]:
         #    coalition_id = coalitions.index(data["coalition"].lower().strip()) + 1
         # else:
@@ -379,6 +393,8 @@ def make_membership(dataset, parties, coalitions, contest_chambers, header):
         if (contest_id < 0):
             print("role_id: " + str(contest_id))
             print("person_id: " + str(i))
+
+            
 
         lines.append({
             "is_deleted": data["is_deleted"],

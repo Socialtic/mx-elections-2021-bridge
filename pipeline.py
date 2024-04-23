@@ -10,7 +10,7 @@ from utils import (make_banner, verification_process,
                    make_other_names_struct, make_person_profession,
                    make_membership, make_url_struct, send_data)
 # ID sheets
-CAPTURE_SHEET_ID = "1xpUPmExf6f3v7a5ZhzO2rHtVwToItNXZUJ2ormbdFJ8"
+CAPTURE_SHEET_ID = "1p7XMADrpEXRKzC3WKwlr3zcpyuJ_moCy04tkEyWEPYY"
 # Capture Read Ranges
 READ_RANGE = "Todos!A1:AL1635"
 COALITION_URL_RANGE = "URL_logo_partido_coal!A1:H1"
