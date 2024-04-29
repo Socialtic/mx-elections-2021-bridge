@@ -633,7 +633,7 @@ def get_dummy_data(endpoint):
             "state": "",
             "city": "",
             "district_type": -1,
-            "parent_area_id": -1,
+            # "parent_area_id": -1,
         }
     elif endpoint == "role":
         dummy_data = {

@@ -56,6 +56,7 @@ def main():
         date = datetime.now()
         str_date = date.strftime("%y-%b-%d")
         write_csv("\n".join(error_lines), f"errors/{str_date}_errors")
+        # print(error_lines);
         print(f"\n\t ** {len(error_lines)} fails **")
     else:
         print("\t OK. ")

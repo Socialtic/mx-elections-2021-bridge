@@ -58,6 +58,7 @@ def url_check(urls, mode, field):
     elif mode == "light":
         pattern = '(^http[s]?:\/\/(w{3}\.)?[\w-]+[.\w]+(\/[\w.?%=@&-]+)*$|^$)'
     wrong_urls = [str(i) for i, url in enumerate(urls, start=1) if not re.search(pattern, url)]
+
     return f",{field}({','.join(wrong_urls)})" if wrong_urls else ""
 
 

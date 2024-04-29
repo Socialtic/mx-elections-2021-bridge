@@ -37,6 +37,8 @@ write_csv(make_table(area_header, area_data), f"{CSV_DB_PATH}/area")
 for area in area_data:
     if area["area_id"] == "":
         area["is_deleted"] = True
+    
+    del area["parent_area_id"]
     del area["area_id"]
 
 # CHAMBER
