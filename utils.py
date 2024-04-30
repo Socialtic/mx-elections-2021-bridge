@@ -511,7 +511,7 @@ def make_url_struct(dataset, url_types, url_id_counter, coalitions=[],
     """
     # TODO: refactor this stuff :(
     lines = []
-    field_pattern = r'(^Website$|^URL_(\w)*$)'
+    field_pattern = r'(^Website$|^URL_(\w)*|source_of_truth$)'
     url_id = url_id_counter
     if owner_type in ["coalition", "party"]:
         for i, data in enumerate(dataset, start=1):
