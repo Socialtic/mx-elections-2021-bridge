@@ -587,7 +587,8 @@ def get_dummy_data(endpoint):
             "gender": -1,
             "dead_or_alive": True,
             "last_degree_of_studies": -1,
-            "contest_id": -1
+            "contest_id": -1,
+            "person_id": -1
         }
     elif endpoint == "other-name":
         dummy_data = {
@@ -633,7 +634,7 @@ def get_dummy_data(endpoint):
             "state": "",
             "city": "",
             "district_type": -1,
-            # "parent_area_id": -1,
+            "parent_area_id": "",
         }
     elif endpoint == "role":
         dummy_data = {
@@ -685,12 +686,24 @@ def send_data(base_url, endpoint, dataset):
             try:
                 if row["is_deleted"]:
                     dummy_data = get_dummy_data(endpoint)
+                    oi = 0;
+                    if endpoint == "person":
+                        oi = i;
+                        i = 900000+i
+                        dummy_data["person_id"] = i
                     r = requests.post(full_url, json=dummy_data, headers=HEADERS)
                     post_status = r.status_code
-                    r = requests.delete(f"{full_url}{i}", headers=HEADERS)
-                    delete_status = r.status_code
-                    print(f"#{i} POST: {post_status} DELETE: {delete_status}")
+                    r2 = requests.delete(f"{full_url}{i}", headers=HEADERS)
+                    delete_status = r2.status_code
+                    # if delete_status != 200:
+                    if endpoint == "person":
+                        print(f"#{i} POST: {post_status} DELETE: {delete_status}")
+                        print("i",i)
+                        print("created dummy",r.json());
+                        print("row",row)
                     deleted.append(row)
+                    if endpoint == "person":
+                            i = oi
                     continue
                 else:
                     del row["is_deleted"]

@@ -38,7 +38,6 @@ for area in area_data:
     if area["area_id"] == "":
         area["is_deleted"] = True
     
-    del area["parent_area_id"]
     del area["area_id"]
 
 # CHAMBER

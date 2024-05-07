@@ -3,12 +3,12 @@
     "SHEET_ID": "1ObRLk3oXG4Q47HiHwx0dGTMssRZ6wCO5ZABee5t60qs",
     "x_SHEET_ID_2022": "1H9I_fhpQWMPn5wgRvdBrnmoZ9WpgTIwJnKfda6LEycY",
     "ST_RANGES": {
-        "area": "A1:H1171", 
-        "chamber": "A1:C1171",
-        "role": "A1:F1171",
-        "contest": "A1:G1171",
-        "coalition": "A1:D122",
-        "party": "A1:F92",
+        "area": "A1:H1190", 
+        "chamber": "A1:C1190",
+        "role": "A1:F1190",
+        "contest": "A1:G1190",
+        "coalition": "A1:D128",
+        "party": "A1:F93",
         "profession": "A1:B122",
         "url_types": "B2:B23"
     },
