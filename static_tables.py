@@ -66,6 +66,8 @@ write_csv(make_table(coalition_header, coalition_data),
           f"{CSV_DB_PATH}/coalition")
 coalition_data = colors_to_list(coalition_data)
 for coalition in coalition_data:
+    if coalition["coalition_id"] == "":
+        coalition["is_deleted"] = True
     del coalition["coalition_id"]
 coalitions_catalogue = sheet_reader(SHEET_ID, f"Table coalition!B2:B{get_end_range(ST_RANGES['coalition'])}",
                                     as_list=True)
