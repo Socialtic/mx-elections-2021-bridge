@@ -27,6 +27,7 @@
         "gender",
         "dead_or_alive",
         "last_degree_of_studies",
-        "contest_id"
+        "contest_id",
+        "profession_1"
     ]
 }

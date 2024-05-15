@@ -588,7 +588,8 @@ def get_dummy_data(endpoint):
             "dead_or_alive": True,
             "last_degree_of_studies": -1,
             "contest_id": -1,
-            "person_id": -1
+            "person_id": -1,
+            'profession_1': ''
         }
     elif endpoint == "other-name":
         dummy_data = {
@@ -667,6 +668,15 @@ def get_dummy_data(endpoint):
             "area_id": -1,
             "name": ""
         }
+    elif endpoint == "coalition":
+        dummy_data = {
+            "name": "",
+            'abbreviation': '', 
+            'colors': []           
+        }
+    if (not dummy_data):
+        print("get_dummy_data error, missing dummy data for:",endpoint)
+        return {}
     return dummy_data
 
 
