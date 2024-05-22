@@ -11,7 +11,7 @@ import sys
 #    "profession": "A1:B119", "contest": "A1:G426"
 #    # "past-membership": "A1:G1",
 #    }
-CSV_DB_PATH = 'csv_db_officeholders'
+CSV_DB_PATH = 'csv_db'
 
 COUNTRY_FILE = sys.argv[2];
 
