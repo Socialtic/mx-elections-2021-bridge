@@ -15,7 +15,7 @@
     "CAPTURE_SHEET_ID": "162Mg4SbflawNKcu4df4Bik5FBksoyQh0MS73e13ka-k",
     "x_CAPTURE_SHEET_ID_2022": "146HBFWr_6_jvmCtTPHoDcSI3dFZcqSUPdmoc69oayrU",
     "x_CAPTURE_SHEET_ID_campaign": "1mk9LTI5RBYwrEPzILeDY925VJbLVmEoZyRzaa1gZ_hk",
-    "READ_RANGE": "Captura!A1:AI5000",
+    "READ_RANGE": "Captura!A1:AW5000",
     "COALITION_URL_RANGE": "URL_logo_partido_coal!A1:H37",
     "PARTY_URL_RANGE": "URL_logo_partido_coal!I1:R62",
     "person_header": [
@@ -28,6 +28,7 @@
         "dead_or_alive",
         "last_degree_of_studies",
         "contest_id",
-        "profession_1"
+        "profession_1",
+        "replaced_person_id"
     ]
 }

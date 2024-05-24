@@ -304,6 +304,8 @@ def make_person_struct(dataset, contest_chambers, header):
                     row[field] = -1
             elif field == "contest_id":
                 row[field] = get_contest_id(data, contest_chambers)
+            elif field == "replaced_person_id":
+                row[field] = data[field] if data[field] else None
             elif field == "date_birth":
                 if data[field]:
                     row[field] = data[field]
@@ -589,7 +591,8 @@ def get_dummy_data(endpoint):
             "last_degree_of_studies": -1,
             "contest_id": -1,
             "person_id": -1,
-            'profession_1': ''
+            "profession_1": '',
+            "replaced_person_id": None
         }
     elif endpoint == "other-name":
         dummy_data = {
